@@ -1,0 +1,73 @@
+@import '~assets/styles/shared-styles.scss';
+
+.font-weight-medium {
+    font-weight: $font-weight-medium !important;
+}
+
+.font-weight-regular {
+    font-weight: $font-weight-regular;
+}
+
+.font-size-10 {
+    font-size: to-rem($font-size-10) !important;
+}
+
+.font-size-12 {
+    font-size: to-rem($font-size-12) !important;
+}
+
+.font-size-13 {
+    font-size: to-rem($font-size-13);
+}
+
+.font-size-14 {
+    font-size: to-rem($font-size-14) !important;
+}
+
+.font-size-16 {
+    font-size: to-rem($font-size-14) !important;
+
+    @include breakpoint-mini('l') {
+        font-size: to-rem($font-size-16) !important;
+    }
+}
+
+.font-size-18 {
+    font-size: to-rem($font-size-18);
+}
+
+.font-size-20 {
+    font-size: to-rem($font-size-16);
+
+    @include breakpoint-mini('l') {
+        font-size: to-rem($font-size-20) !important;
+    }
+}
+
+.font-size-24 {
+    font-size: to-rem($font-size-16);
+
+    @include breakpoint-mini('l') {
+        font-size: to-rem($font-size-24) !important;
+    }
+}
+
+.text-bali-hai {
+    color: color(BaliHai);
+}
+
+.text-white {
+    color: color(White);
+}
+
+.text-Haiti {
+    color: color(Haiti);
+}
+
+.text-violet-red {
+    color: color(VioletRed);
+}
+
+.bgWhite {
+    background: color(White);
+}

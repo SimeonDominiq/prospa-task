@@ -1,0 +1,68 @@
+@import '~assets/styles/shared-styles.scss';
+
+.sideBar {
+    background: color(White) 0% 0% no-repeat;
+    position: unset;
+    top: 0;
+    bottom: 0;
+    height: calc(100vh - 0px);
+    padding-top: 0.5rem;
+    overflow-x: hidden;
+    overflow-y: auto;
+    z-index: 100;
+    transition: width 0.2s ease;
+    -webkit-box-shadow: 0 20px 40px 0 rgba(0, 0, 0, 0.05);
+    box-shadow: 0 20px 40px 0 rgba(0, 0, 0, 0.05);
+
+    @include breakpoint-mini('l') {
+        width: to-rem(350);
+    }
+
+    .userDetails {
+        padding: to-rem(10);
+
+        .userAvatar {
+            height: to-rem(50);
+            width: to-rem(50);
+            background: color(Haiti);
+            border-radius: 50%;
+            color: color(White);
+            text-align: center;
+            line-height: to-rem(50);
+
+            span {
+                font-weight: $font-weight-medium;
+            }
+        }
+
+        .media-body {
+            .btnDropdown {
+                > button {
+                    background: color(BlackSqueeze);
+                    width: to-rem(40);
+                    height: to-rem(40);
+                }
+
+                > .dropdown-menu {
+                    border: 0px solid;
+                    -webkit-box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.05) !important;
+                    box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.05) !important;
+
+                    button {
+                        border-bottom: to-rem(1) solid color(BlackSqueeze);
+
+                        :last-child {
+                            border-bottom: 0px solid !important;
+                        }
+                    }
+                }
+            }
+
+            h6 {
+                font-size: to-rem($font-size-16);
+                font-weight: $font-weight-medium;
+                color: color(Tolopea);
+            }
+        }
+    }
+}

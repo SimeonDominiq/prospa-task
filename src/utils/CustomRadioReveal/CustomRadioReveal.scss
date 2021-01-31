@@ -1,0 +1,81 @@
+@import '~assets/styles/shared-styles.scss';
+
+.customRadioReveal {
+    margin-bottom: to-rem(15);
+
+    > label {
+        background: color(White);
+        border-radius: to-rem(5);
+        -webkit-box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.05);
+        box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.05);
+        color: color(Dark);
+        cursor: pointer;
+        display: block;
+        margin-bottom: 5px;
+        padding: to-rem(30 20 30 50);
+        position: relative;
+
+        &:after,
+        &:before {
+            background: color(White);
+            border: to-rem(1) solid color(Whisper);
+            border-radius: 50%;
+            content: '';
+            height: to-rem(20);
+            left: to-rem(18);
+            position: absolute;
+            top: to-rem(31);
+            width: to-rem(20);
+        }
+    }
+
+    input[type='radio'] {
+        appearance: none;
+        display: none;
+        position: absolute;
+        width: 100%;
+
+        &:checked + label {
+            border: to-rem(1) solid color(VioletRed);
+
+            &:after {
+                background: color(VioletRed);
+            }
+
+            &:before {
+                border-radius: 50%;
+                height: 20px;
+                width: 20px;
+            }
+
+            > div {
+                max-height: unset;
+                min-height: to-rem(10);
+                opacity: 1;
+                overflow: visible;
+                padding-bottom: to-rem(10);
+                transform: scale(1);
+            }
+        }
+    }
+}
+
+.reveal-if-active {
+    font-size: 16px;
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transform: scale(0.8);
+    transition: 0.5s;
+
+    label {
+        display: block;
+        margin: 0 0 3px 0;
+    }
+}
+
+.labelHeader {
+    color: color(Haiti);
+    font-size: to-rem($font-size-16);
+    font-weight: $font-weight-medium;
+}

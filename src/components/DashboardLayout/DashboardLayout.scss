@@ -1,0 +1,11 @@
+@import '~assets/styles/shared-styles.scss';
+
+#wrapper {
+    background: color(BlackSqueeze);
+    display: flex;
+
+    #contentWrapper {
+        overflow-x: hidden;
+        width: 100%;
+    }
+}
